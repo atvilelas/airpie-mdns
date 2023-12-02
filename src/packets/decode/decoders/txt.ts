@@ -1,6 +1,6 @@
 import { Packet, Decoder, TXT, MDNS_RECORD_TYPES } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 
 export const txt: Decoder<Packet<TXT>> = (buffer, options) => {
   const { offset, payloadFields, length } = options || {};

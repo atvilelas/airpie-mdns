@@ -1,4 +1,4 @@
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 import { cleanupPayload } from '../../utils/cleanupPayload';
 import { macAddress } from '../decoders/macAddress';
 import { Decoder, ETHERNET_TYPES, EthernetFrame, Packet } from '../types';

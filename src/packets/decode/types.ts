@@ -1,5 +1,5 @@
-import { MacVendor } from '@airpie/common-network/types';
-import { Numeral } from '@utils/types';
+import { MacVendor } from '@airpie/common-network';
+import { Numeral } from '@airpie/common-misc';
 import { MDNS_RESOURCE_RECORDS_TYPES } from '../types';
 
 export enum MDNS_RECORD_TYPES {

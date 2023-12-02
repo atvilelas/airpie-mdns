@@ -1,4 +1,4 @@
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 import { name } from './name';
 import { Packet, Decoder, MDNS_QUESTION_CLASSES, Answer, Name, MDNS_RECORD_TYPES } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';

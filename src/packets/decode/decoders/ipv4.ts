@@ -1,8 +1,11 @@
 import { IPV4_SIZE, decodeIPv4 } from '@airpie/common-network';
 import { Packet, DCSP_VALUES, ECN_VALUES, IP_PROTOCOLS, IPv4Frame, Decoder } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
-import { Binary } from '@utils/types';
+import { getNumeral } from '@airpie/common-misc';
+import { Binary } from '@airpie/common-misc';
+import { getStore } from '@airpie/common-store';
+
+console.log('hello', getStore);
 
 export const ipv4: Decoder<Packet<IPv4Frame>> = (buffer, options) => {
   const { offset, payloadFields } = options || {};
@@ -39,6 +42,7 @@ export const ipv4: Decoder<Packet<IPv4Frame>> = (buffer, options) => {
   decodingOffset += IPV4_SIZE;
   const destinationIpBuffer = buffer.subarray(decodingOffset, decodingOffset + IPV4_SIZE);
   decodingOffset += IPV4_SIZE;
+  console.log(decodeIPv4);
   const sourceIP = decodeIPv4(sourceIpBuffer);
   const destinationIP = decodeIPv4(destinationIpBuffer);
   const readingBuffer = buffer.subarray(baseOffset, decodingOffset);

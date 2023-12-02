@@ -1,4 +1,4 @@
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 import { cleanupPayload } from '../../utils/cleanupPayload';
 import { Decoder, Packet, UDPProtocol } from '../types';
 

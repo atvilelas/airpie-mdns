@@ -1,5 +1,4 @@
-import { getNumeral } from '@utils';
-import { PacketSizeHeaderDecodeError } from '../../../errors';
+import { getNumeral } from '@airpie/common-misc';
 import { cleanupPayload } from '../../utils/cleanupPayload';
 import {
   Decoder,
@@ -16,7 +15,7 @@ export const header: Decoder<Packet<MDNSHeader>> = (buffer, options) => {
   const baseOffset = offset || 0;
   let decodingOffset = baseOffset;
 
-  if (buffer.length < 12) throw new PacketSizeHeaderDecodeError(buffer.length);
+  if (buffer.length < 12) throw new Error(`Invalid payload size for header. Expected 12 received ${buffer.length}`);
 
   const id = buffer.readUInt16BE(decodingOffset);
   decodingOffset += 2;

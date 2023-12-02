@@ -1,5 +1,5 @@
-import { NoNetworkError, getScannableNetworkInterfaces } from '@airpie/common-network';
-import { NetworkInterface } from '@airpie/common-network/types';
+import { getScannableNetworkInterfaces } from '@airpie/common-network';
+import { NetworkInterface } from '@airpie/common-network';
 
 import { store } from './store';
 
@@ -14,5 +14,5 @@ export const getAllNetworkInterfaces = (skipCache?: boolean): NetworkInterface[]
     return scannableInterfaces;
   }
 
-  throw new NoNetworkError(new Error('Unable to find network interface with valid network to be scanned.'));
+  throw new Error('Unable to find network interface with valid network to be scanned.');
 };

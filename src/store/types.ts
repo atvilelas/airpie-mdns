@@ -1,4 +1,4 @@
-import { NetworkInterface } from '@airpie/common-network/types';
+import { NetworkInterface } from '@airpie/common-network';
 import { Socket } from 'dgram';
 import EventEmitter from 'events';
 

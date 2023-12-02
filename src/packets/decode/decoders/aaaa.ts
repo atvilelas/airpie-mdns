@@ -1,6 +1,6 @@
 import { Packet, Decoder, MDNS_RECORD_TYPES, AAAA } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 import { decodeIPv6 } from '@airpie/common-network';
 
 export const aaaa: Decoder<Packet<AAAA>> = (buffer, options) => {

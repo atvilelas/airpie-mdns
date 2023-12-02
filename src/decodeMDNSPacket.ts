@@ -1,6 +1,6 @@
-import { header as decodeHeader } from '../mdns/packets/decode';
-import { list as decodeList } from '../mdns/packets/decode/decoders/list';
-import { Answer, DecodedPacket, MDNS_RESOURCE_RECORDS_TYPES, Question } from '../mdns/packets/types';
+import { header as decodeHeader } from './packets/decode';
+import { list as decodeList } from './packets/decode/decoders/list';
+import { Answer, DecodedPacket, MDNS_RESOURCE_RECORDS_TYPES, Question } from './packets/types';
 
 export const decodeMDNSPacket = (packet: Buffer): DecodedPacket => {
   const mdnsHeader = decodeHeader(packet, {

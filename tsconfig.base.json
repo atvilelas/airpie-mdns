@@ -4,14 +4,15 @@
     "allowJs": true,
     "outDir": "lib",
     "rootDir": "src",
-
+    "target": "es2022",
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
     "declaration": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]

@@ -1,6 +1,6 @@
 import { Packet, Decoder, SRV, MDNS_RECORD_TYPES } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 import { name } from './name';
 
 export const srv: Decoder<Packet<SRV>> = (buffer, options) => {

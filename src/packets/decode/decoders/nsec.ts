@@ -1,6 +1,6 @@
 import { Packet, Decoder, MDNS_RECORD_TYPES, NSEC } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 import { name } from './name';
 import { typesInBitmap } from './typesInBitmap';
 

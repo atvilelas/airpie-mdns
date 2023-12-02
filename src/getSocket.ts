@@ -1,4 +1,3 @@
-import { CreateSocketError, GetSocketError } from './errors';
 import { store } from './store';
 import dgram, { Socket } from 'dgram';
 
@@ -19,8 +18,8 @@ export const getSocket = (skipCache?: boolean): Socket => {
       return newSocket;
     }
   } catch (error) {
-    throw new CreateSocketError(error as Error);
+    throw new Error(`${(error as Error).message}.\nError while trying to create a socket.`);
   }
 
-  throw new GetSocketError(new Error('Socket not found'));
+  throw new Error('Socket not found');
 };

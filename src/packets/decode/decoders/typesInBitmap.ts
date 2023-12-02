@@ -1,6 +1,6 @@
 import { Packet, Decoder, MDNS_RECORD_TYPES, TypesInBitmap } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 
 export const typesInBitmap: Decoder<Packet<TypesInBitmap>> = (buffer, options) => {
   const { offset, payloadFields, length } = options || {};

@@ -1,7 +1,7 @@
 import { IPV6_SIZE, decodeIPv6 } from '@airpie/common-network';
 import { Packet, DCSP_VALUES, ECN_VALUES, IP_PROTOCOLS, IPv6Frame, Decoder } from '../types';
 import { cleanupPayload } from '../../utils/cleanupPayload';
-import { getNumeral } from '@utils';
+import { getNumeral } from '@airpie/common-misc';
 
 export const ipv6: Decoder<Packet<IPv6Frame>> = (buffer, options) => {
   const { offset, payloadFields } = options || {};
