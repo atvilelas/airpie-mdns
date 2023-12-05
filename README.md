@@ -1,3 +1,8 @@
+![alt text](./coverage//badge-branches.svg)
+![alt text](./coverage//badge-functions.svg)
+![alt text](./coverage//badge-lines.svg)
+![alt text](./coverage//badge-statements.svg)
+
 # A true full implementation of MDNS / DNS-SD / Zero conf
 
 The goal with this is to have a full implementation of MDNS standarts for decoding and encoding in type script.
@@ -50,7 +55,9 @@ Lots of documentation is necessary specifically around
 - Encoding & Decoding
 - Better logging
 
-# Tests
+# Tests summary
+
+![alt text](./test-report.svg)
 
 The idea is to have a close as possible to 100% coverage (I know overrated), but because there are some many nuances from the protocol definition it's better to have all basis covered
 
