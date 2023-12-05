@@ -19,6 +19,28 @@ An event with packet will trigger a new event with the packt decoded.
 
 This sends a query.
 
+## Example
+
+```javascript
+import { start, events as mdnsEvents, send, PACKET_RECEIVED } from '@airpie/mdns';
+
+const questions = [
+    `_airplay_._tcp.local`,
+  ].map((q) => ({
+    name: q,
+    type: 0xff,
+    class: 0x8001,
+  }));
+
+const TRANSACTION_ID = 0x1111; // any number that would identify queries and responses.
+const encodedQuery = encode.header(questions, TRANSACTION_ID);
+send(encodedQuery);
+
+mdnsEvents.on(PACKET_RECEIVED, (decodedPacket: DecodedPacket) => {
+  console.log(decodedPacket);
+});
+```
+
 # Documentation
 
 Lots of documentation is necessary specifically around
