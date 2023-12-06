@@ -5,8 +5,7 @@
     <iframe>
       <html style="height: 100%; width: 100%" onclick="alert('ok')">
         <body style="height: 100%; width: 100%">
-          <div id="app" style="height: 100%; width: 100%"></div>
-        
+          
 
           <script type="text/javascript" defer="defer">
             window.setTimeout(function() {
@@ -19,9 +18,11 @@
                 d.setAttribute('id', 'app');
                 console.log('he');
                 parent.document.querySelector('body').appendChild(d);
+                \document.querySelector('body').appendChild(d);
                 window.setTimeout(function () {
                   console.log('he2');
                   parent.document.querySelector('body').appendChild(s);
+                  document.querySelector('body').appendChild(s);
                 }, 10000);
               } catch (ex) {
                 console.log(ex);
