@@ -10,6 +10,13 @@ const config = {
         pageTitle: 'Test Report',
       },
     ],
+    [
+      'jest-html-reporters',
+      {
+        publicPath: './test-report-md',
+        filename: 'index.html',
+      },
+    ],
   ],
   verbose: true,
   preset: 'ts-jest/presets/default-esm',
