@@ -54,7 +54,7 @@ const headlessChrome = async () => {
     rect?.height ?? 0,
   )}" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="min-height: 100%, min-width: 100%">
       <html style="min-height: 100%, min-width: 100%">
         <head>
           <meta charset="utf-8" />
