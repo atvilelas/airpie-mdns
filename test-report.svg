@@ -1,6 +1,6 @@
 <svg fill="none" viewBox="0 0 1920 1380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%">
+    <iframe xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%">
       <html style="height: 100%; width: 100%" onclick="alert('ok')">
         <body style="height: 100%; width: 100%">
           <div id="app" style="height: 100%; width: 100%"></div>
@@ -18,6 +18,6 @@
           <script  type="application/javascript" "defer="defer" src="./test-report-md/jest-html-reporters-attach/index/index.js"></script>
         </body>
       </html>
-    </div>
+    </iframe>
   </foreignObject>
 </svg>
