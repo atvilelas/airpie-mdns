@@ -14,7 +14,7 @@
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "test:badges": "jest-coverage-badges",
+    "test:badges": "jest-coverage-badges --output './badges'",
     "test:prepare-md": "rm -rf scripts/build && tsc -b ./tsconfig.scripts.json && node ./scripts/build/coverageSummaryForMD.js",
     "test:complete": "yarn test & yarn test:badges & yarn test:prepare-md",
     "compile:types": "tsc -b ./tsconfig.types.json",
