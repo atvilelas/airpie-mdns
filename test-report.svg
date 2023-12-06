@@ -17,7 +17,7 @@
                 s.setAttribute('type', 'text/javascript');
                 d.setAttribute('id', 'app');
                 console.log('he4');
-                // parent.document.querySelector('body').appendChild(d);
+                
                 document.querySelector('body').appendChild(d);
                 window.setTimeout(function () {
                   console.log('he3');
