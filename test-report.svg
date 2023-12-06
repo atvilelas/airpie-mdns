@@ -5,6 +5,7 @@
       <html style="height: 100%; width: 100%" onclick="alert('ok')">
         <body style="height: 100%; width: 100%">
           <div id="app" style="height: 100%; width: 100%"></div>
+
           <script type="application/javascript" defer="defer">
             !function() {
             const d = document.createElement('div')
@@ -16,7 +17,6 @@
             document.querySelector('#app').style.width = '100%'
             }();
           </script>
-          <script  type="application/javascript" "defer="defer" src="./test-report-md/jest-html-reporters-attach/index/index.js"></script>
         </body>
       </html>
     </iframe>
