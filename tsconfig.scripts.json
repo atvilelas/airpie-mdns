@@ -1,11 +1,12 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "module": "es2022",
     "outDir": "scripts/build",
     "target": "es2022",
-    "rootDir": "scripts"
+    "rootDir": "scripts",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": ["node_modules", "src"],
+  "exclude": ["src", "node_modules"],
   "include": ["scripts/**/*.ts"]
 }

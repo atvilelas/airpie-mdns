@@ -1,0 +1,260 @@
+<html><head><meta charset="utf-8"/><title>Test Report</title><style type="text/css">html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+body {
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+.jesthtml-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin: 0;
+  flex-grow: 1;
+}
+#logo {
+  height: 4rem;
+}
+#timestamp {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/** SUMMARY */
+#summary {
+  color: #333;
+  margin: 2rem 0;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#summary > div {
+  margin-right: 2rem;
+  background: #eee;
+  padding: 1rem;
+  min-width: 15rem;
+}
+#summary > div:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 720px) {
+  #summary {
+    flex-direction: column;
+  }
+  #summary > div {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+  #summary > div:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.summary-passed {
+  color: #4f8a10;
+  border-left: 0.4rem solid #4f8a10;
+  padding-left: 0.5rem;
+}
+.summary-failed,
+.summary-obsolete-snapshots {
+  color: #d8000c;
+  border-left: 0.4rem solid #d8000c;
+  padding-left: 0.5rem;
+}
+.summary-pending {
+  color: #9f6000;
+  border-left: 0.4rem solid #9f6000;
+  padding-left: 0.5rem;
+}
+.summary-empty {
+  color: #999;
+  border-left: 0.4rem solid #999;
+}
+
+.test-result {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+.test-result:last-child {
+  border: 0;
+}
+.test-result.passed {
+  background-color: #dff2bf;
+  color: #4f8a10;
+}
+.test-result.failed {
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.test-result.pending {
+  background-color: #ffdf61;
+  color: #9f6000;
+}
+
+.test-info {
+  display: flex;
+  justify-content: space-between;
+}
+.test-suitename {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-word;
+}
+.test-title {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+}
+.test-status {
+  width: 20%;
+  text-align: right;
+}
+.test-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.failureMessages {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed #d8000c;
+}
+.failureMessages.suiteFailure {
+  border-top: none;
+}
+.failureMsg {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.suite-container {
+  margin-bottom: 2rem;
+}
+.suite-container > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.suite-container label {
+  display: block;
+}
+.suite-container .suite-tests {
+  overflow-y: hidden;
+  height: 0;
+}
+.suite-container > input[type="checkbox"]:checked ~ .suite-tests {
+  height: auto;
+  overflow: visible;
+}
+.suite-info {
+  padding: 1rem;
+  background-color: #eee;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.suite-info:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+.suite-info .suite-path {
+  word-break: break-all;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.suite-info .suite-time {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.suite-info .suite-time.warn {
+  background-color: #d8000c;
+  color: #fff;
+}
+.suite-info:before {
+  content: "\2303";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+}
+.suite-container > input[type="checkbox"]:checked ~ label .suite-info:before {
+  transform: rotate(180deg);
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #efefef;
+}
+.suite-consolelog-header {
+  font-weight: bold;
+}
+.suite-consolelog-item {
+  padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-consolelog-item-origin {
+  color: #777;
+  font-weight: bold;
+}
+.suite-consolelog-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* OBSOLETE SNAPSHOTS */
+.suite-obsolete-snapshots {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.suite-obsolete-snapshots-header {
+  font-weight: bold;
+}
+.suite-obsolete-snapshots-item {
+  padding: 0.5rem;
+}
+.suite-obsolete-snapshots-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-obsolete-snapshots-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+</style></head><body><div class="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2023-12-05 20:57:11</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (7)</div><div class="summary-passed ">6 passed</div><div class="summary-failed ">1 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (73)</div><div class="summary-passed ">67 passed</div><div class="summary-failed ">6 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><input id="collapsible-0" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-0"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/decode/decoders/question.test.ts</div><div class="suite-time">2.192s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Question tests</div><div class="test-title">reads the name resource record name until if finds </div><div class="test-status">passed</div><div class="test-duration">0.035s</div></div></div></div></div><div id="suite-2" class="suite-container"><input id="collapsible-1" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-1"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/decode/decoders/ptr.test.ts</div><div class="suite-time">2.254s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Record Resource PTR  tests</div><div class="test-title">reads the name resource record name</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Record Resource PTR  tests</div><div class="test-title">reads the partial name resource record name</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Record Resource PTR  tests</div><div class="test-title">throws an error if the pointer is wrong or lenght is 0</div><div class="test-status">passed</div><div class="test-duration">0.009s</div></div></div></div></div><div id="suite-3" class="suite-container"><input id="collapsible-2" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-2"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/packets.test.ts</div><div class="suite-time">2.284s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Packet tests</div><div class="test-title">holds place</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div></div></div><div id="suite-4" class="suite-container"><input id="collapsible-3" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-3"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/decode/protocols/udp.test.ts</div><div class="suite-time">2.317s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test UDP Payload within a MDNS Packet</div><div class="test-title">returns the source port, for MDNS it should always be 5353</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test UDP Payload within a MDNS Packet</div><div class="test-title">returns the destination port, for MDNS it should always be 5353</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test UDP Payload within a MDNS Packet</div><div class="test-title">returns the source port as the first 2 bytes of payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test UDP Payload within a MDNS Packet</div><div class="test-title">returns the destination port as the 2nd and 3rd bytes of payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test UDP Payload within a MDNS Packet</div><div class="test-title">returns the payload length read from 4th and 5th bytes of payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test UDP Payload within a MDNS Packet</div><div class="test-title">returns the payload checksum read from 6th and 7th bytes of payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div></div></div><div id="suite-5" class="suite-container"><input id="collapsible-4" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-4"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/decode/decoders/name.test.ts</div><div class="suite-time">2.363s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">reads the name resource record name</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">throws an error if the offset requested is beyond the buffer</div><div class="test-status">failed</div><div class="test-duration">0.034s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">throws an error if the label length is beyond the buffer size</div><div class="test-status">failed</div><div class="test-duration">0.001s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">throws an error if the name is invalid</div><div class="test-status">failed</div><div class="test-duration">0.004s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">throws an error if the total lenght exceeds 254</div><div class="test-status">failed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">reads the data from previous record if there is a pointer value</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">throws an error if the pointer value is beyond buffer length</div><div class="test-status">failed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">moves the cursor back in the right field if a pointer is found (incomplete name using part of another record to complete)</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">returns a partial name if no frame offset is specified</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">throws an error if the pointer is placed beyond the buffer</div><div class="test-status">failed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">moves the cursor back (2x) in the right field if a pointer is found (incomplete name using part of another record to complete)</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">MDNS Name tests</div><div class="test-title">moves the cursor back (3x) in the right field if a pointer is found (incomplete name using part of another record to complete)</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div></div></div><div id="suite-6" class="suite-container"><input id="collapsible-5" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-5"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/decode/decoders/ipv6.test.ts</div><div class="suite-time">2.497s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">always returns 6 for the version</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">always returns 6 for the version</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">reads the first 6 bits of the field and converts it to Differentiated Services Code Point (DSCP)</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">returns CS0 (Default) for DSCP</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">reads the remaining 2 bits of the field and converts it to Explicit Congestion Notification (ECN)</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">returns Not ECN-capable for ECN</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">reads the length off of the 5rd and 6th bytes of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">returns the length of the payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">reads next header protocol off of the 7th byte of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">returns protocol of the payload payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">returns protocol name of the payload payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">reads the hop limit from the 8th byte</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">returns the source ip from payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">returns the destination ip from payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">hides the details if options is provided</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">hides the bytes if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">hides the bytePosition if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">hides the buffer if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">hides the readingBuffer if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV6 Payload within a MDNS Packet</div><div class="test-title">hides the version if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div></div></div><div id="suite-7" class="suite-container"><input id="collapsible-6" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-6"><div class="suite-info"><div class="suite-path">/Users/atvilelas/Documents/Projects/AirPie/mdns/src/packets/decode/decoders/ipv4.test.ts</div><div class="suite-time">2.552s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">always returns 4 for the version</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">always returns 4 for the version</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">always returns the header length of the payload.</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">reads the first 6 bits of the field and converts it to Differentiated Services Code Point (DSCP)</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">returns CS0 (Default) for DSCP</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">reads the remaining 2 bits of the field and converts it to Explicit Congestion Notification (ECN)</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Differentiated Services Field</div><div class="test-title">returns Not ECN-capable for ECN</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">reads the length off of the 3rd and 4th bytes of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns the length of the payload</div><div class="test-status">passed</div><div class="test-duration">0.009s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">reads the identification off of the 5th and 6th bytes of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns the length of the payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Flags</div><div class="test-title">returns the flag number as a binary of 3 bits</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Flags</div><div class="test-title">returns zero for the reserved bit</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Flags</div><div class="test-title">returns false for the "Don't Fragment" flag</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet &gt; Flags</div><div class="test-title">returns false for the "More Fragment" flag</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">reads the time to live (TTL) off of the 9th byet of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns time to live of the payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">reads the protocol off of the 10th byet of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns protocol of the payload payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns protocol name of the payload payload</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">reads the header checksum of the 11th and 12th bytes of the frame payload</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns the checksum of the payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns the source ip from payload</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">returns the destination ip from payload</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">hides the details if options is provided</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">hides the bytes if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">hides the bytePosition if options is provided</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">hides the buffer if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">hides the readingBuffer if options is provided</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test IPV4 Payload within a MDNS Packet</div><div class="test-title">hides the version if options is provided</div><div class="test-status">passed</div><div class="test-duration">0s</div></div></div></div></div></div></body></html>
