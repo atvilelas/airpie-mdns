@@ -2,15 +2,6 @@ const config = {
   roots: ['<rootDir>/src'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   coverageReporters: ['json-summary', 'text', 'lcov'],
-  reporters: [
-    'default',
-    [
-      './node_modules/jest-html-reporter',
-      {
-        pageTitle: 'Test Report',
-      },
-    ],
-  ],
   verbose: true,
   preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'node',

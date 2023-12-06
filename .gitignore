@@ -5,3 +5,4 @@ lib
 coverage
 .DSStore
 test-report.html
+./test-report.html
