@@ -20,6 +20,7 @@
           <div id="app" style="height: 100%; width: 100%"></div>
           <script>
             document.querySelector('#user-content-app').setAttribute('id', 'app');
+            console.log(document.querySelector('#user-content-app'));
             document.querySelector('#app').style.height = '100%'
             document.querySelector('#app').style.width = '100%'
           </script>
