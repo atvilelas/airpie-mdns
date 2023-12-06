@@ -8,6 +8,7 @@
           
           <div>OK</div>
           <script type="text/javascript" defer="defer">
+            const theBody = document.querySelector('body');
             window.setTimeout(function() {
               try {
                 const d = document.createElement('div')
@@ -18,10 +19,10 @@
                 d.setAttribute('id', 'app');
                 console.log('he4');
                 
-                document.querySelector('body').appendChild(d);
+                theBody.appendChild(d);
                 window.setTimeout(function () {
                   console.log('he3');
-                  document.querySelector('body').appendChild(s);
+                  theBody.appendChild(s);
                 }, 10000);
               } catch (ex) {
                 console.log(ex);
