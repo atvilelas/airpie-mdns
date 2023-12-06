@@ -10,15 +10,7 @@
           <script type="application/javascript" defer="defer">
             window.setTimeout(function() {
             try {
-            const d = document.createElement('div')
-            const s = document.createElement('script')
-            s.src = './test-report-md/jest-html-reporters-attach/index/index.js';
-            d.setAttribute('id', 'app');
-            document.querySelector('body').appendChild(d);
-            console.log(document.querySelector('#app'));
-            document.querySelector('#app').style.height = '100%'
-            document.querySelector('#app').style.width = '100%'
-            document.querySelector('body').appendChild(s);
+            alert('here');
             } catch (ex) {
               console.log(ex);
             }
