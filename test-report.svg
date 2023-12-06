@@ -11,7 +11,7 @@
             const d = document.createElement('div')
       
             d.setAttribute('id', 'app');
-            document.body.appendChild(d);
+            document.querySelector('body').appendChild(d);
             console.log(document.querySelector('#user-content-app'));
             document.querySelector('#app').style.height = '100%'
             document.querySelector('#app').style.width = '100%'
