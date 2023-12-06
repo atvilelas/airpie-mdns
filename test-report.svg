@@ -20,7 +20,8 @@
                 console.log('he');
                 parent.document.querySelector('body').appendChild(d);
                 window.setTimeout(function () {
-                parent.document.querySelector('body').appendChild(s);
+                  console.log('he2');
+                  parent.document.querySelector('body').appendChild(s);
                 }, 1000);
               } catch (ex) {
                 console.log(ex);
