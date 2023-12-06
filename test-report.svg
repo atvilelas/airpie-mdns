@@ -22,7 +22,7 @@
                 window.setTimeout(function () {
                   console.log('he2');
                   parent.document.querySelector('body').appendChild(s);
-                }, 1000);
+                }, 10000);
               } catch (ex) {
                 console.log(ex);
               }
