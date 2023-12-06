@@ -7,3 +7,5 @@ webpack.prod.config.js
 jest.config.js
 .prettierrc
 .eslintrc
+test-report.html
+scripts

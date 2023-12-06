@@ -3,6 +3,9 @@
   "compilerOptions": {
     "outDir": "lib",
     "declaration": true,
+    "rootDir": "src",
     "emitDeclarationOnly": true
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/**/*", "scripts"]
 }

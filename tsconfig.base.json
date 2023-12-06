@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es2022"],
+    "lib": ["es2022", "dom"],
     "allowJs": true,
     "outDir": "lib",
     "rootDir": "src",
@@ -14,6 +14,6 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/**/*", "scripts"]
 }
