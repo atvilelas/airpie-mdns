@@ -6,7 +6,7 @@
       <html style="height: 100%; width: 100%" onclick="alert('ok')">
         <body style="height: 100%; width: 100%">
           
-
+          <div>OK</div>
           <script type="text/javascript" defer="defer">
             window.setTimeout(function() {
               try {
