@@ -5,7 +5,6 @@
     <iframe>
       <html style="height: 100%; width: 100%" onclick="alert('ok')">
         <body style="height: 100%; width: 100%">
-          <div id="app" style="height: 100%; width: 100%"></div>
         
 
           <script type="text/javascript" defer="defer">
