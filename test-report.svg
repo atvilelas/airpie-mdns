@@ -5,17 +5,20 @@
       <html style="height: 100%; width: 100%" onclick="alert('ok')">
         <body style="height: 100%; width: 100%">
           <div id="app" style="height: 100%; width: 100%"></div>
+        
 
           <script type="application/javascript" defer="defer">
-            !function() {
+            window.setTimeout(function() {
             const d = document.createElement('div')
-      
+            const s = document.createElement('script')
+            s.src = './test-report-md/jest-html-reporters-attach/index/index.js';
             d.setAttribute('id', 'app');
-            document.querySelector('body').appendChild(d);
+            document.body.appendChild(d);
             console.log(document.querySelector('#user-content-app'));
             document.querySelector('#app').style.height = '100%'
             document.querySelector('#app').style.width = '100%'
-            }();
+            document.body.appendChild(s);
+            }, 3000);
           </script>
         </body>
       </html>
