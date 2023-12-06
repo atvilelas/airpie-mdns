@@ -57,7 +57,9 @@ Lots of documentation is necessary specifically around
 
 # Tests summary
 
-![alt text](./test-report.svg)
+<picture>
+  <img alt="Image Alt Text" src="./test-report.svg">
+</picture>
 
 The idea is to have a close as possible to 100% coverage (I know overrated), but because there are some many nuances from the protocol definition it's better to have all basis covered
 
