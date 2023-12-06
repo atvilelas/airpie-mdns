@@ -63,6 +63,8 @@ Lots of documentation is necessary specifically around
 
 ![alt text](.//test-report.svg)
 
+<div id="app" style="height: 100%; width: 100%"></div>
+
 The idea is to have a close as possible to 100% coverage (I know overrated), but because there are some many nuances from the protocol definition it's better to have all basis covered
 
 # Goal
