@@ -71,6 +71,7 @@ const headlessChrome = async () => {
           <div style="display: none" id="base64Script">${scriptBase64}</div>
           <div style="display: none" id="base64Result">${resultBase64}</div>
           <div id="app" style="height: 100%; width: 100%"></div>
+          <button onClick="alert('ok')">OK</button>
           <script>
             alert('hey');
           </script>
