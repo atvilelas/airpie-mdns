@@ -18,11 +18,11 @@
             // s.setAttribute('defer', 'defer');
             s.setAttribute('type', 'text/javascript');
             d.setAttribute('id', 'app');
-            parent.document.querySelector('body').appendChild(d);
-            console.log(document.parentElement.querySelector('#app'));
-            document.parentElement.querySelector('#app').style.height = '100%'
-            document.parentElement.querySelector('#app').style.width = '100%'
+            
+            d.style.height = '100%'
+            d.style.width = '100%'
             parent.document.querySelector('body').appendChild(s);
+            parent.document.querySelector('body').appendChild(d);
             } catch (ex) {
               console.log(ex);
             }
