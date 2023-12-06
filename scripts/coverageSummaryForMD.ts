@@ -72,6 +72,9 @@ const headlessChrome = async () => {
         ><title>Report</title>
         <body style="height: 100%; width: 100%">
           <div id="app" style="height: 100%; width: 100%"></div>
+          <script>
+          document.body.appendChild(document.querySelector('svg #app'));
+          </script>
           <script defer="defer" src="./test-report-md/jest-html-reporters-attach/index/index.js"></script>
         </body>
       </html>
