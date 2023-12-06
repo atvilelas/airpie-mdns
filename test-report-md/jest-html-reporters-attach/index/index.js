@@ -80199,7 +80199,8 @@
                   break;
                 case 7:
                   return (
-                    (e.next = 9), _y('./'.concat(wJ(), '../../../test-report-md/jest-html-reporters-attach/result.js'))
+                    (e.next = 9),
+                    _y('./'.concat(wJ(), '../../../test-report-md/jest-html-reporters-attach/index/result.js'))
                   );
                 case 9:
                   t = e.sent;
