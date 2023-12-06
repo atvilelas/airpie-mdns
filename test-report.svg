@@ -21,7 +21,6 @@
                 document.querySelector('body').appendChild(d);
                 window.setTimeout(function () {
                   console.log('he3');
-                  // parent.document.querySelector('body').appendChild(s);
                   document.querySelector('body').appendChild(s);
                 }, 10000);
               } catch (ex) {
