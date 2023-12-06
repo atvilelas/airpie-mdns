@@ -15,12 +15,14 @@
             const s = document.createElement('script')
             s.src = 'https://raw.githubusercontent.com/atvilelas/airpie-mdns/main/test-report-md/jest-html-reporters-attach/index/index.js';
             s.setAttribute('src', 'https://raw.githubusercontent.com/atvilelas/airpie-mdns/main/test-report-md/jest-html-reporters-attach/index/index.js')
+            s.setAttribute('defer', 'defer);
+            s.setAttribute('type', 'text/javascript);
             d.setAttribute('id', 'app');
             document.parentElement.querySelector('body').appendChild(d);
             console.log(document.parentElement.querySelector('#app'));
             document.parentElement.querySelector('#app').style.height = '100%'
-            document.parentElement..querySelector('#app').style.width = '100%'
-            document.parentElement..querySelector('body').appendChild(s);
+            document.parentElement.querySelector('#app').style.width = '100%'
+            document.parentElement.querySelector('body').appendChild(s);
             } catch (ex) {
               console.log(ex);
             }
