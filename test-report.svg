@@ -18,8 +18,8 @@
                 s.setAttribute('type', 'text/javascript');
                 d.setAttribute('id', 'app');
                 console.log('he');
-                parent.document.querySelector('body').appendChild(s);
                 parent.document.querySelector('body').appendChild(d);
+                parent.document.querySelector('body').appendChild(s);
               } catch (ex) {
                 console.log(ex);
               }
