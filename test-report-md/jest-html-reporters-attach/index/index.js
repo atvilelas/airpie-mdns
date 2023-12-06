@@ -80198,7 +80198,7 @@
                   (a = o.innerText), (t = JSON.parse(a)), (e.next = 10);
                   break;
                 case 7:
-                  return (e.next = 9), _y('/../jest-html-reporters-attach/test-report-md/'.concat(wJ(), '/result.js'));
+                  return (e.next = 9), _y('/../jest-html-reporters-attach/test-report-md/'.concat('', '/result.js'));
                 case 9:
                   t = e.sent;
                 case 10:
